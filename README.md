@@ -1,4 +1,4 @@
-# MazeGame
+# 從迷宮裡逃走吧
 需確定ubuntu系統裡有沒有安裝了Python，使用以下命令確認：python3 --version
 如果你的系統沒有安裝，可以使用以下命令安裝：
 sudo apt-get update
