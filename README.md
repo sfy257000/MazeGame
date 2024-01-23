@@ -26,7 +26,9 @@ sudo apt-get install python3
 使用ctrl+c退出flask。
 ## 心得回饋&遇到的困難
 1.原本是想要以nginx代理到網頁上，但我花了很久時間沒有搞定要怎麼用，所以最後改用了flask
+
 2.使用了flask後不知道怎麼把遊戲運行在網頁上，只能運行在Terminal上，只有選擇地圖，及顯示遊戲結束是在網頁上。'
+
 3.時間不足
 ## 參考資料
 flask:https://devs.tw/post/448
