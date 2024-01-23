@@ -5,6 +5,7 @@
 執行app.py後即可開始遊玩，使用wasd控制腳色移動
 ## 軟體
 flask
+
 python
 ## 執行過程
 需確定ubuntu系統裡有沒有安裝了Python，使用以下命令確認：python3 --version
