@@ -1,6 +1,6 @@
 # 從迷宮裡逃走吧
 ## 動機
-你是一位勇者，因為不小心被大魔王抓進了迷宮裡，趕快逃出來打敗大魔王吧!
+你是一位勇者，因為不小心被大魔王抓進了迷宮裡，趕快從迷宮中逃出來打敗大魔王吧拯救世界吧!
 ## 功能：
 執行app.py後即可開始遊玩，使用wasd控制腳色移動
 ## 軟體
@@ -16,7 +16,7 @@ sudo apt-get install python3
 
 在虛擬環境中安裝 Flask。使用以下命令：pip install Flask
 
-新增一個資料夾，ex:game。將app.py檔案放進去，在新增的資料夾裡再新增一個templates資料夾，將index.html及play.html兩個檔案丟進去。
+新增一個資料夾，ex:game。將app.py檔案放進去，在新增的資料夾裡再新增一個templates資料夾，將index.html及play.html及game_over.html三個檔案丟進去。
 
 開啟Terminal，cd到game資料夾，使用以下命令開始遊戲:python3 app.py。
 
