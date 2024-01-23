@@ -20,7 +20,7 @@ sudo apt-get install python3
 
 開啟Terminal，cd到game資料夾，使用以下命令開始遊戲:python3 app.py。
 
-在瀏覽器打開這個網址:http://127.0.0.1:5000/選擇迷宮地圖
+在瀏覽器打開這個網址:http://127.0.0.1:5000/     選擇迷宮地圖
 
 回到Terminal開始遊戲，使用wasd進行移動，走到p即通關。
 
