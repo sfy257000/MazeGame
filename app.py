@@ -3,6 +3,9 @@ import os
 import tty
 import termios
 import sys
+import time
+from datetime import datetime, timedelta
+
 
 app = Flask(__name__)
 
@@ -19,7 +22,7 @@ def move_player(move, player_position):
 
     return tuple(new_position)
 
-def print_maze(player_position):
+def print_maze(player_position, remaining_time, score):
     os.system('clear') 
     
     for i in range(len(maze)):
@@ -35,6 +38,8 @@ def print_maze(player_position):
             else:
                 print(' ', end=' ')
         print()
+    print(f"Remaining Time: {remaining_time.seconds} seconds")
+    print(f"Score: {score} points")
 
 def get_char():
 
@@ -119,18 +124,28 @@ def play():
         ]
 
     player_position = (0, maze[0].index('S'))
+    start_time = datetime.now()
+    score = 0
 
     while True:
-        print_maze(player_position)
+        elapsed_time = datetime.now() - start_time
+        remaining_time = timedelta(seconds=30) - elapsed_time
+        if remaining_time.total_seconds() <= 0:
+            print_maze(player_position, remaining_time, score)
+            return "時間到！遊戲結束。分數：0。"
+
+        print_maze(player_position, remaining_time,score)
         
         if maze[player_position[0]][player_position[1]] == 'E':
-            return "恭喜你找到終點！遊戲結束。"
+            score = int(100 * (remaining_time.total_seconds() / 30))
+            print_maze(player_position, remaining_time, score)
+            return f"恭喜你找到終點！遊戲結束。分數：{score}"
 
         move = get_char()
         
         if move == 'q':
-            return "遊戲結束。"
-
+            print_maze(player_position, remaining_time, score)
+            return f"遊戲結束。分數：{score}"
         player_position = move_player(move, player_position)
 
 if __name__ == '__main__':
