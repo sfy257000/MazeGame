@@ -138,8 +138,7 @@ def play():
         
         if maze[player_position[0]][player_position[1]] == 'E':
             score = int(100 * (remaining_time.total_seconds() / 30))
-            print_maze(player_position, remaining_time, score)
-            return f"恭喜你找到終點！遊戲結束。分數：{score}"
+            return render_template('game_over.html', score=score)
 
         move = get_char()
         
